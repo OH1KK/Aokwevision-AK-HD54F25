@@ -1,4 +1,4 @@
-# Aokwevision AK-HD54F25 control scripts
+# Aokwevision AK-HD54F25 control
 
 4 inch Mini Size 5MP 4MP outdoor Onvif Network H.264/265 IP PTZ camera speed dome 30X zoom ptz ip camera 60m IR nightvision
 
