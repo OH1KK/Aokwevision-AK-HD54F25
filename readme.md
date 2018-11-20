@@ -32,7 +32,7 @@ Sets overlay text1 to top left corner. Maximum text length 36 chars.
 
 Camera supports also (at least) scandinavian chars, eg you can write "Tämä on kova kamera PERKELE!" which is nice.
 
-There are total 
+There are total 5 text preset places available, thus this code supports only one at this moment.
 
 ## Motivation
 
