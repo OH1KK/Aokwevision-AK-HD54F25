@@ -24,6 +24,14 @@ Set = write current position to preset
 
 where number is preset number 0-255
 
+## Set overlay text
+
+    ./aokwevision-osd-text.php "blah blah blah"
+
+Sets overlay text to top left cornet. Maximum text length 36 chars.
+
+Camera supports also (at least) scandinavian chars, eg you can write "Tämä on kova kamera PERKELE!"
+
 ## Motivation
 
 I buyed this camera from aliexpress https://www.aliexpress.com/item/New-arrival-4MP-4-inch-Mini-Size-Network-Onvif-IP-PTZ-speed-dome-20X-optical-zoom/32633649414.htm . Because api was poorly documented, I sniffed some commands from webui (that sucks) and write short programs to do same thing from linux console. 
