@@ -28,9 +28,11 @@ where number is preset number 0-255
 
     ./aokwevision-osd-text.php "blah blah blah"
 
-Sets overlay text to top left cornet. Maximum text length 36 chars.
+Sets overlay text1 to top left corner. Maximum text length 36 chars.
 
-Camera supports also (at least) scandinavian chars, eg you can write "Tämä on kova kamera PERKELE!"
+Camera supports also (at least) scandinavian chars, eg you can write "Tämä on kova kamera PERKELE!" which is nice.
+
+There are total 
 
 ## Motivation
 
