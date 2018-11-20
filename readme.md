@@ -17,11 +17,12 @@ to pan, tilt and zoom user keyboard keys left, right, up, down, +, -, and q for 
 
 ## Programmin presets to camera and recalling presets
 
-Usage: ./aokwevision-presets.php [get|set] number
+    ./aokwevision-presets.php [get|set] number
 
 Get = recall saved preset
 Set = write current position to preset
-where preset is number 0-255
+
+where number is preset number 0-255
 
 ## Motivation
 
