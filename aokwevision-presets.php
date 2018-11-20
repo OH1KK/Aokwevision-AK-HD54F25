@@ -26,7 +26,6 @@ function WritePreset($number) {
 }
 
 function RecallPreset($number) {
-    echo "GotoPreset $number";
     global $cam_ip, $cam_user, $cam_passwd;
     $url="http://".$cam_ip."/form/presetSet";
     $headers=array(
@@ -43,7 +42,6 @@ function RecallPreset($number) {
     curl_setopt($ch, CURLOPT_TIMEOUT, 2);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $return = curl_exec($ch);
-    echo $return;
     curl_close($ch);
 } 
 
