@@ -13,7 +13,7 @@ You can watch camera stream from camera using videolan media player
 
     ./aokwevision-ptz.php
     
-to pan, tilt and zoom user keyboard keys left, right, up, down, +, -, and q for quit
+to pan, tilt and zoom using keyboard keys left, right, up, down, +, -, and q for quit
 
 ## Programmin presets to camera and recalling presets
 
