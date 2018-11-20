@@ -19,6 +19,21 @@ function WriteOverlay1($OSD1Str, $Text1OSDEnable=1, $Text1OSDX=2, $Text1OSDY=2, 
     ."Text1OSDY=${Text1OSDY}&"
     ."OSD1Size=${OSD1Size}&"
     ."OSD1Str=${OSD1Str}";
+    
+    /* and other default osd text - comment out if don't want to see */
+    $data.="&Text2OSDEnable=0&"
+    ."Text3OSDEnable=0&"
+    ."Text4OSDEnable=0&"
+    ."Text5OSDEnable=0&"
+    ."MultipleOSDEnable=1&"
+    ."MultipleOSDX=95&"
+    ."MultipleOSDY=98&"
+    ."MultipleOSDSize=3&"
+    ."DTimeOSDEnable=1&"
+    ."DTimeOSDX=95&"
+    ."DTimeOSDY=2&"
+    ."DTimeOSDSize=3";
+    
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_POST, true);
@@ -31,7 +46,7 @@ function WriteOverlay1($OSD1Str, $Text1OSDEnable=1, $Text1OSDX=2, $Text1OSDY=2, 
 }
 
 if (isset($_SERVER["argv"]["1"])) {
-    $overlaytext=substr(filter_var($_SERVER["argv"]["1"],FILTER_SANITIZE_STRING),0,35);
+    $overlaytext=urlencode(substr(filter_var($_SERVER["argv"]["1"],FILTER_SANITIZE_STRING),0,35));
     WriteOverlay1($overlaytext);
 } else {
     echo "Usage: ".$_SERVER["argv"]["0"]." \"blah blah blah\"\n";
