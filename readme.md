@@ -36,6 +36,12 @@ There are total 5 text preset places available, thus this code supports only one
 
 ## Motivation
 
-I buyed this camera from aliexpress https://www.aliexpress.com/item/New-arrival-4MP-4-inch-Mini-Size-Network-Onvif-IP-PTZ-speed-dome-20X-optical-zoom/32633649414.htm . Because api was poorly documented, I sniffed some commands from webui (that sucks) and write short programs to do same thing from linux console. 
+I buyed this camera from aliexpress https://www.aliexpress.com/item/New-arrival-4MP-4-inch-Mini-Size-Network-Onvif-IP-PTZ-speed-dome-20X-optical-zoom/32633649414.htm . Nice piece of hardware. Because API was poorly documented, I sniffed some commands from webui (that sucks, in my opinion) and write short programs to do same things from linux console. 
 
-Camera supports ONVIF too, you might not need these scripts at all.
+Camera supports ONVIF. You might not need this code at all.
+
+## License
+
+[The MIT License (MIT)](LICENSE)
+
+Copyright (c) 2018 Kari Karvonen
