@@ -6,8 +6,8 @@
 
 You can watch camera stream from camera using videolan media player
 
-    vlc rtsp://192.168.1.110/1/h264major
-    vlc rtsp://192.168.1.110/1/h264minor
+    vlc --rtsp-tcp rtsp://192.168.1.110/1/h264major
+    vlc --rtsp-tcp rtsp://192.168.1.110/1/h264minor
     
 ## Pan, tilt, zoom
 
