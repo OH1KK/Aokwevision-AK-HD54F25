@@ -19,15 +19,20 @@ to pan, tilt and zoom using keyboard keys left, right, up, down, +, -, and q for
 
     ./aokwevision-presets.php [get|set|getname|setname] number {name}
 
-moveto = point camera to saved ptz position
-save = write current ptz values to preset
-getname = display name for preset
-setname = write name for preset
+Where
+
+    moveto = point camera to saved ptz position
+    save = write current ptz values to preset
+    getname = display name for preset
+    setname = write name for preset
 
 Valid numbers for preset are 0-255
 Maximum length for preset name is 64 chars
 
-Name is saved ptz position&apos;s description, for example</pre>
+Name is saved ptz positio's description, for example
+
+    ./aokwevision-presets.php setname 2 "carage door"
+
 where number is preset number 0-255
 
 ## Set overlay text
