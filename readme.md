@@ -21,11 +21,11 @@ You can watch camera stream from camera using videolan media player
 
     date +%s%N | cut -b1-13 | xargs -i wget -q "http://192.168.1.110/jpgmulreq/1/image.jpg?key={}&lq=12" -O snapshot.jpg
 
-also see slideshow.html which has example javascript to add still webcam to webpage using still images.
+See slideshow.html which has example javascript webcam code
 
 ## HTML5 browser live feed
 
-See html5livestream.txt
+It is possible to get good quality stream to webpage. See html5livestream.txt
 
 ## Pan, tilt, zoom
 
