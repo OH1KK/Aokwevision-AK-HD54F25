@@ -19,7 +19,7 @@ You can watch camera stream from camera using videolan media player
 
 ## Still image
 
-    date +%s%N | cut -b1-13 | xargs -i wget -q "http://@192.168.1.110/jpgmulreq/1/image.jpg?key={}&lq=12" -O snapshot.jpg
+    date +%s%N | cut -b1-13 | xargs -i wget -q "http://192.168.1.110/jpgmulreq/1/image.jpg?key={}&lq=12" -O snapshot.jpg
     
 ## Pan, tilt, zoom
 
