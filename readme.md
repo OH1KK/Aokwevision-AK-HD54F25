@@ -2,7 +2,7 @@
 
 4 inch Mini Size 5MP 4MP outdoor Onvif Network H.264/265 IP PTZ camera speed dome 30X zoom ptz ip camera 60m IR nightvision
 
-## Username and password
+## Camera default username and password
 
 Default username is admin and password is blank.
 
