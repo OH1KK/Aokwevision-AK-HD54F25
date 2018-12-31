@@ -10,7 +10,7 @@ Default username is admin and password is blank.
 
 Note: even you change those, there is invisible hardcoded account that gives you access to admin interface. Invisible username and password is HANKVISION_2016
 
-This camera is insecure. Keep your camera in isolated private network, and do not give it direct access to internet.
+This camera is insecure. Keep your camera in isolated private network and do not give it direct access to internet.
 
 ## Camera Stream
 
