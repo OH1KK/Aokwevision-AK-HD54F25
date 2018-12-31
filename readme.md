@@ -23,6 +23,10 @@ You can watch camera stream from camera using videolan media player
 
 also see slideshow.html which has example javascript to add still webcam to webpage using still images.
 
+## HTML5 browser live feed
+
+See html5livestream.txt
+
 ## Pan, tilt, zoom
 
     ./aokwevision-ptz.php
