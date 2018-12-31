@@ -8,7 +8,7 @@ Default username is admin and password is blank.
 
 Note: even you change those, there is invisible hardcoded account that gives you access to admin interface. Username and password is HANKVISION_2016
 
-This camera is very insecure. Keep your camera in isolated private network, and do not expose management interface (or telnet, or port tcp/10081) directly to internet!
+This camera is very insecure. Keep your camera in isolated private network, and do not give it direct access to internet.
 
 ## Camera Stream
 
@@ -21,11 +21,11 @@ You can watch camera stream from camera using videolan media player
 
     date +%s%N | cut -b1-13 | xargs -i wget -q "http://192.168.1.110/jpgmulreq/1/image.jpg?key={}&lq=12" -O snapshot.jpg
 
-See slideshow.html which has example javascript webcam code
+See slideshow.html which has example javascript webcam code.
 
 ## HTML5 browser live feed
 
-It is possible to get good quality stream to webpage. See html5livestream.txt
+It is possible to get good quality stream to webpage. See html5livestream.txt which has ffmpeg magick and hls.js based webpage example
 
 ## Pan, tilt, zoom
 
