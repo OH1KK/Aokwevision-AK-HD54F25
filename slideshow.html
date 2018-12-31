@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aokwevision example slideshow</title>
+</head>
+<body>
+<img id="image" src="#" alt="camera image"/>
+<script>
+var timer;
+function imageloop()
+{
+        var image = document.getElementById("image");
+        var key = (new Date()).getTime();
+        var imageSrc = "http://192.168.1.110/jpgmulreq/1/image.jpg?key=" + key + "&lq=12";
+        image.src = imageSrc;
+        timer = setTimeout("imageloop()", 1000);
+}
+if(window.attachEvent) {
+        window.attachEvent('onload', imageloop);
+}  else {
+        if(window.onload) {
+                var curronload = window.onload;
+                var newonload = function(evt) {
+                        curronload(evt);
+                        imageloop(evt);
+                };
+                window.onload = newonload;
+        } else {
+                window.onload = imageloop;
+        }
+}
+</script>
+</body>
+</html>
