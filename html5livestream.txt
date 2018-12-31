@@ -1,0 +1,68 @@
+Web browser does not directy support rtsp stream. But you can get live video stream from camera to webpage if you convert it to stream type that browser can show. You can use ffmpeg to do this.
+
+ffmpeg -fflags nobuffer \
+ -rtsp_transport tcp \
+ -i rtsp://192.168.1.110/1/h264major \
+ -vsync 0 \
+ -copyts \
+ -vcodec copy \
+ -movflags frag_keyframe+empty_moov \
+ -an \
+ -hls_flags delete_segments \
+ -f segment \
+ -segment_list_flags live \
+ -segment_time 1 \
+ -segment_list_size 3 \
+ -segment_format mpegts \
+ -segment_list /var/www/html/mywebcam/stream/index.m3u8 \
+ -segment_list_type m3u8 \
+ -segment_list_entry_prefix http://www.mysite.org/mywebcam/stream/ \
+ -segment_wrap 10 \
+ /var/www/html/mywebcam/stream/%d.ts
+
+
+Then your webpage
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mywebcam</title>
+    <style>
+    #video {
+      object-fit: contain;
+      width: 100%;
+    }
+    </style>
+  </head>
+  <body>
+      <!-- get hls.js from github https://github.com/video-dev/hls.js/ -->
+      <script src="js/hls.js"></script>
+      <div class="video-container">
+          <video id="video"></video>
+      </div>
+
+      <script>
+        if(Hls.isSupported()) {
+          var video = document.getElementById('video');
+          var hls = new Hls();
+          hls.loadSource('http://www.mysite.org/mywebcam/stream/index.m3u8');
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED,function() {
+            video.play();
+        });
+       }
+       // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+       // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+       // This is using the built-in support of the plain video element, without using hls.js.
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = 'http://www.mysite.org/mywebcam/stream/index.m3u8';
+          video.addEventListener('canplay',function() {
+            video.play();
+          });
+        }
+	
+      </script>
+  </body>
+</html>
