@@ -2,6 +2,14 @@
 
 4 inch Mini Size 5MP 4MP outdoor Onvif Network H.264/265 IP PTZ camera speed dome 30X zoom ptz ip camera 60m IR nightvision
 
+## Username and password
+
+Default username is admin and password is blank.
+
+Note: even you change those, there is invisible hardcoded account that gives you access to admin interface. Username and password is HANKVISION_2016
+
+This camera is very insecure. Keep your camera in isolated private network, and do not expose management interface (or telnet, or port tcp/10081) directly to internet!
+
 ## Camera Stream
 
 You can watch camera stream from camera using videolan media player
