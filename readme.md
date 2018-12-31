@@ -4,6 +4,8 @@
 
 ## Camera default username and password
 
+Default IP address is 192.168.1.110
+
 Default username is admin and password is blank.
 
 Note: even you change those, there is invisible hardcoded account that gives you access to admin interface. Username and password is HANKVISION_2016
