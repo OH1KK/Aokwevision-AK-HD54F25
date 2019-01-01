@@ -23,6 +23,10 @@ You can watch camera stream from camera using videolan media player
     
     wget -q http://admin:@192.168.1.110/jpgimage/1/image.jpg
     
+or 
+
+    wget -q http://admin:@192.168.1.110/mjpgstreamreq/1/image.jpg -O image.jpg
+    
 or without password
     
     date +%s%N | cut -b1-13 | xargs -i wget -q "http://192.168.1.110/jpgmulreq/1/image.jpg?key={}&lq=12" -O snapshot.jpg
