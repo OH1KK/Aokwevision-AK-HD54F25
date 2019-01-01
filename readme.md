@@ -22,6 +22,8 @@ You can watch camera stream from camera using videolan media player
     vlc --rtsp-tcp rtsp://192.168.1.110/mpeg4cif
     vlc --rtsp-tcp rtsp://192.168.1.110/mpeg4/ch01/main/av_stream
     vlc --rtsp-tcp rtsp://192.168.1.110/mpeg4/ch01/sub/av_stream
+    vlc --rtsp-tcp rtsp://192.168.1.110/1/major_sjkd
+    vlc --rtsp-tcp rtsp://192.168.1.110/1/minor_sjkd
 
 ## Still image
     
