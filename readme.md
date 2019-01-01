@@ -20,7 +20,11 @@ You can watch camera stream from camera using videolan media player
     vlc --rtsp-tcp rtsp://192.168.1.110/1/h264minor
 
 ## Still image
-
+    
+    wget -q http://admin:@192.168.1.110/jpgimage/1/image.jpg
+    
+OR
+    
     date +%s%N | cut -b1-13 | xargs -i wget -q "http://192.168.1.110/jpgmulreq/1/image.jpg?key={}&lq=12" -O snapshot.jpg
 
 See slideshow.html which has example javascript webcam code.
