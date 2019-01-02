@@ -8,3 +8,14 @@ setenv bootargs mem=96M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jf
 sf probe 0;sf read 0x82000000 0x50000 0x2b0000;bootm 0x82000000
 
 Then you are in shell.
+
+Networking.
+
+You can bring network interface up manully
+
+ip addr add 192.168.1.100/24 dev eth0
+ip link set dev eth0 up
+ip route add 0/0 via 192.168.1.1
+ping 8.8.8.8
+
+File transfers are possible at least with tftp
