@@ -2,9 +2,10 @@
 
 4 inch Mini Size 5MP 4MP outdoor Onvif Network H.264/265 IP PTZ camera speed dome 30X zoom ptz ip camera 60m IR nightvision
 
-System chip HiSilicon Hi3516A100
-Sensor type Brillnics BRV0500 1/2.5” CMOS
-Device type is V6202IR-BRV0500
+Hardware info
+
+* System chip HiSilicon Hi3516A100
+* Sensor type Brillnics BRV0500 1/2.5” CMOS
 
 ## Camera default username and password
 
