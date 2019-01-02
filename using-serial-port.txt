@@ -1,0 +1,10 @@
+Connect serial port to computer. Com settings 115200-n-8-1
+
+Power on camera. Hit any key.
+
+Copy & paste
+
+setenv bootargs mem=96M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=hi_sfc:320K(boot),2752K(kernel),2M(rootfs),11M(data) init=/bin/sh  
+sf probe 0;sf read 0x82000000 0x50000 0x2b0000;bootm 0x82000000
+
+Then you are in shell.
