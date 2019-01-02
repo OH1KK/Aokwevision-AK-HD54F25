@@ -19,4 +19,6 @@ ip route add 0/0 via 192.168.1.1
 
 File transfers are possible at least with tftp
 
-tftp -r /etc/passwd -p 172.16.49.2
+tftp -r /etc/passwd -p 192.168.1.2
+
+which puts passwd to tftp server 192.168.1.2
