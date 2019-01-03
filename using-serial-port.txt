@@ -52,6 +52,17 @@ you shoud see following processes on process list
 
 == Listening sockets ==
 
+Known
+
+telnet 23 (hisilicon's default)
+rtsp 554
+onvif 8999
+http 80
+video 90
+record 8088
+
+And what other there is
+
 /mnt/flash/data # netstat -lnp
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
