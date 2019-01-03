@@ -9,6 +9,7 @@ sf probe 0;sf read 0x82000000 0x50000 0x2b0000;bootm 0x82000000
 
 Then you are in shell.
 
+
 Networking.
 
 You can bring network interface up manully
@@ -18,6 +19,11 @@ ip link set dev eth0 up
 ip route add 0/0 via 192.168.1.1
 
 File transfers are possible at least with tftp
+
+mount -t proc /proc
+mount -t sysfs none /sys
+/etc/init.d/S00devs
+/etc/init.d/S01udev
 
 tftp -r /etc/passwd -p 192.168.1.2
 
