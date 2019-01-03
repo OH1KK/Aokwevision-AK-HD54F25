@@ -48,3 +48,40 @@ you shoud see following processes on process list
  1372 root       0:05 /mnt/flash/Server/LINUX/hiapp
  1380 root       0:00 /mnt/flash/Server/LINUX/webs
  1387 root       0:00 httpd -p 10081 -h /mnt/flash/data
+
+
+== Listening sockets ==
+
+/mnt/flash/data # netstat -lnp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN      1372/hiapp
+tcp        0      0 0.0.0.0:10081           0.0.0.0:*               LISTEN      1387/httpd
+tcp        0      0 0.0.0.0:34567           0.0.0.0:*               LISTEN      1372/hiapp
+tcp        0      0 0.0.0.0:8999            0.0.0.0:*               LISTEN      1372/hiapp
+tcp        0      0 0.0.0.0:554             0.0.0.0:*               LISTEN      1372/hiapp
+tcp        0      0 0.0.0.0:20203           0.0.0.0:*               LISTEN      1326/watchall
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1380/webs
+tcp        0      0 0.0.0.0:23              0.0.0.0:*               LISTEN      942/telnetd
+tcp        0      0 0.0.0.0:8088            0.0.0.0:*               LISTEN      1372/hiapp
+tcp        0      0 0.0.0.0:90              0.0.0.0:*               LISTEN      1372/hiapp
+tcp        0      0 0.0.0.0:8091            0.0.0.0:*               LISTEN      1372/hiapp
+netstat: /proc/net/tcp6: No such file or directory
+udp        0      0 0.0.0.0:9985            0.0.0.0:*                           1372/hiapp
+udp        0      0 255.255.255.255:9985    0.0.0.0:*                           1372/hiapp
+udp        0      0 0.0.0.0:34569           0.0.0.0:*                           1372/hiapp
+udp        0      0 255.255.255.255:38475   0.0.0.0:*                           1372/hiapp
+udp        0      0 0.0.0.0:3702            0.0.0.0:*                           1372/hiapp
+udp        0      0 239.255.255.250:3702    0.0.0.0:*                           1372/hiapp
+udp        0      0 0.0.0.0:6792            0.0.0.0:*                           1372/hiapp
+udp        0      0 0.0.0.0:3001            0.0.0.0:*                           1372/hiapp
+udp        0      0 255.255.255.255:3002    0.0.0.0:*                           1372/hiapp
+udp        0      0 0.0.0.0:9983            0.0.0.0:*                           1326/watchall
+udp        0      0 255.255.255.255:9983    0.0.0.0:*                           1326/watchall
+netstat: /proc/net/udp6: No such file or directory
+netstat: /proc/net/raw6: No such file or directory
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node PID/Program name    Path
+unix  2      [ ACC ]     STREAM     LISTENING       1571 1380/webs           /var/tmp/IQ-DSP
+unix  2      [ ACC ]     STREAM     LISTENING       1614 1380/webs           /var/tmp1/IQ-DSP
+/mnt/flash/data # 
