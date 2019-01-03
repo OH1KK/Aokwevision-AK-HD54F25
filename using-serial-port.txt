@@ -39,3 +39,12 @@ which puts files to tftp server 192.168.1.2
 cd /mnt/flash/Server/script
 ./autorun.sh
 
+you shoud see following processes on process list
+
+ 1326 root       0:01 /root/watchall
+ 1338 root       0:38 /mnt/flash/Server/mediaserver/sdk_app
+ 1361 root       0:01 /mnt/flash/Server/LINUX/softwdg
+ 1366 root       0:00 /mnt/flash/Server/LINUX/syslogd
+ 1372 root       0:05 /mnt/flash/Server/LINUX/hiapp
+ 1380 root       0:00 /mnt/flash/Server/LINUX/webs
+ 1387 root       0:00 httpd -p 10081 -h /mnt/flash/data
