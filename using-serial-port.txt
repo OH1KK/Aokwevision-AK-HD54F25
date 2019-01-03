@@ -23,11 +23,13 @@ mount -t proc /proc
 mount -t sysfs none /sys
 /etc/init.d/S00devs
 /etc/init.d/S01udev
+/etc/init.d/S02moutfs
 cat /proc/mtd
 
 tftp -l /dev/mtdblock0 -r mtdblock0-boot -p 192.168.1.2
 tftp -l /dev/mtdblock1 -r mtdblock1-kernel -p 192.168.1.2
 tftp -l /dev/mtdblock2 -r mtdblock2-rootfs -p 192.168.1.2
 tftp -l /dev/mtdblock3 -r mtdblock3-data -p 192.168.1.2
+tftp -l /mnt/flash/Server.tar.xz -r Aokwevision-Server.tar.xz -o 192.168.1.2
 
 which puts files to tftp server 192.168.1.2
