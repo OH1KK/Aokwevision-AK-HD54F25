@@ -2,15 +2,14 @@ Connect serial port to computer. Com settings 115200-n-8-1
 
 Power on camera. Hit any key.
 
-Copy & paste
+== Boot process ==
 
 setenv bootargs mem=96M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=hi_sfc:320K(boot),2752K(kernel),2M(rootfs),11M(data) init=/bin/sh  
 sf probe 0;sf read 0x82000000 0x50000 0x2b0000;bootm 0x82000000
 
 Then you are in shell.
 
-
-Networking.
+== Networking ==
 
 You can bring network interface up manully
 
@@ -18,13 +17,17 @@ ip addr add 192.168.1.100/24 dev eth0
 ip link set dev eth0 up
 ip route add 0/0 via 192.168.1.1
 
-File transfers are possible at least with tftp
+== Backup firmware data to your tftp-server ==
 
 mount -t proc /proc
 mount -t sysfs none /sys
 /etc/init.d/S00devs
 /etc/init.d/S01udev
+cat /proc/mtd
 
-tftp -r /etc/passwd -p 192.168.1.2
+tftp -l /dev/mtdblock0 -r mtdblock0-boot -p 192.168.1.2
+tftp -l /dev/mtdblock1 -r mtdblock1-kernel -p 192.168.1.2
+tftp -l /dev/mtdblock2 -r mtdblock2-rootfs -p 192.168.1.2
+tftp -l /dev/mtdblock3 -r mtdblock3-data -p 192.168.1.2
 
-which puts passwd to tftp server 192.168.1.2
+which puts files to tftp server 192.168.1.2
