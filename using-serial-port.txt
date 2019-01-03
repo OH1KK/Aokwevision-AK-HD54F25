@@ -33,3 +33,9 @@ tftp -l /dev/mtdblock3 -r mtdblock3-data -p 192.168.1.2
 tftp -l /mnt/flash/Server.tar.xz -r Aokwevision-Server.tar.xz -o 192.168.1.2
 
 which puts files to tftp server 192.168.1.2
+
+== Starting camera software ==
+
+cd /mnt/flash/Server/script
+./autorun.sh
+
