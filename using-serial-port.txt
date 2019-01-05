@@ -34,6 +34,11 @@ tftp -l /mnt/flash/Server.tar.xz -r Aokwevision-Server.tar.xz -o 192.168.1.2
 
 which puts files to tftp server 192.168.1.2
 
+If you medify server, you and upload modifed firmware to flash
+
+cd /mnt/flash
+tftp -l Server.tar.xz -r Server.tar.xz-fixed -g 192.168.1.2
+
 == Starting camera software ==
 
 cd /mnt/flash/Server/script
