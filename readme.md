@@ -17,6 +17,72 @@ Note: even you change those, there is invisible hardcoded account that gives you
 
 This camera is insecure. Keep your camera in isolated private network and do not give it direct access to internet.
 
+## Telnet
+
+root:hkipc2016
+
+So with system access we can use openipc.org tool to get system information:
+
+
+```
+Welcome to HiLinux.
+~ # mount -o nolock 95.217.179.189:/srv/ro /mnt/nfs/
+~ # /mnt/nfs/ipctool 
+---
+board:
+  vendor: Hankvision
+  model: V6202IR-OV4689
+chip:
+  vendor: HiSilicon
+  model: 3516AV100
+ethernet:
+  mac: "00:xx:xx:xx:xx:xx"
+  u-mdio-phyaddr: 512943773
+  phy-id: 0xa5a5a5a5
+  d-mdio-phyaddr: a5a5
+rom:
+  - type: nor
+    block: 64K
+    partitions:
+      - name: boot
+        size: 0x50000
+        sha1: 8e569ea5
+        contains:
+          - name: uboot-env
+            offset: 0x40000
+      - name: kernel
+        size: 0x2b0000
+        sha1: f848b1e2
+      - name: rootfs
+        size: 0x200000
+        path: /,jffs2
+        sha1: cf51c57c
+      - name: data
+        size: 0xb00000
+        path: /mnt/flash,jffs2,rw
+    size: 16M
+    addr-mode: 3-byte
+ram:
+  total: 256M
+  media: 160M
+firmware:
+  u-boot: "2010.06 (May 18 2015 - 09:40:27)"
+  kernel: "3.4.35 (Sat Sep 12 11:02:20 CST 2015)"
+  toolchain: gcc version 4.8.3 20131202 (prerelease) (Hisilicon_v300) 
+  libc: uClibc 0.9.33.2
+  sdk: "Hi3516A_MPP_V1.0.4.0 B040 Release (Jun 28 2015, 09:24:48)"
+  god-app: /mnt/flash/Server/mediaserver/sdk_app
+
+In this case the sensor is not Brillnics. By model type it's definitely OV4689.
+So it's partially supported by OpenIPC.org firmware.
+As I see the platform hisilicon-osdrv-hi3516av100 already have sensor support libsns_ov4689.so:
+
+https://github.com/widgetii/openipc-2.1/tree/master/general/package/hisilicon-osdrv-hi3516av100/files/sensor
+
+So soon the camera could be updated with this wonderful and modern firmware.
+
+```
+
 ## Camera Stream
 
 You can watch camera stream from camera using videolan media player
