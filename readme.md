@@ -18,6 +18,11 @@ Note: even you change those, there is invisible hardcoded account that gives you
 This camera is insecure. Keep your camera in isolated private network and do not give it direct access to internet.
 
 ## Telnet
+/etc/passwd:
+
+root:$1$EnVGPLqH$Jwh/FgaqrrHwHsmzHibnc1:0:0::/root:/bin/sh
+
+Decrypted password:
 
 root:hkipc2016
 
